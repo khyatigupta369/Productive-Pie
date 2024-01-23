@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productive Pie</title>
+</head>
+<body>
+    <div>
+        <h3>My 24 hours on a pie</h3>
+    </div>
+    <form action="/" method="get">
+
+        <label for="activity">Activity:</label>
+        <input type="text" id="activity" name="activity" required>
+    
+        <br>
+    
+        <!-- Amount of Time Input -->
+        <label for="time">Time spent:</label>
+        <input type="number" id="time" name="time" value="1" required>
+    
+        <br>
+    
+        <!-- Color Selection -->
+        <label for="color">Pick a Color:</label>
+        <select id="color" name="color" required>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="purple">Purple</option>
+            <option value="pink">Pink</option>
+            <option value="brown">Brown</option>
+            <option value="gray">Gray</option>
+            <option value="black">Black</option>
+        </select>
+    
+        <br>
+    
+        <!-- Submit Button -->
+        <input type="submit" onclick="submitForm()">
+    </form>
+    
+</body>
+
+<script>
+    // Set default time value to 60 minutes (1 hour) after the page loads
+    document.getElementById('time').value = 1;
+
+    // Function to handle form submission
+    function submitForm() {
+        // Get form data
+        var activity = document.getElementById('activity').value;
+        var time = document.getElementById('time').value;
+        var color = document.getElementById('color').value;
+
+        // Handle the form data (you can perform any actions with the data here)
+        console.log("Activity: " + activity);
+        console.log("Time: " + time + " minutes");
+        console.log("Color: " + color);
+
+        // draw a pie chart - use chart.js library
+    }
+</script>
+</html>
